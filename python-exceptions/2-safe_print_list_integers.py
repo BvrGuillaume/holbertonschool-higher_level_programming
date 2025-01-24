@@ -7,9 +7,6 @@ def safe_print_list_integers(my_list=[], x=0):
             count += 1
         except (ValueError, TypeError):
             # Ignorer les éléments non entiers
-            continue
-        except IndexError:
-            # Stop si l'index dépasse la taille de la liste
-            break
+            pass
     print("")  # Nouvelle ligne après l'affichage
     return count
