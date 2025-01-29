@@ -43,12 +43,11 @@ class Square:
         if self.size == 0:
             print()
             return
-        
-        # Print spaces (new lines) based on position[1]
-            for _ in range(self.__position[1]):
+         # Print spaces (new lines) based on position[1]
+        for _ in range(self.__position[1]):
                 print()
 
            # Print the square with space indentation for position[0]
            #  
-            for _ in range(self.__size):
+        for _ in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
