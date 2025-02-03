@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Write a class MyList that inherits from list"""
+
+
 class MyList(list):
     """A subclass of list that adds a method to print the list
       in sorted order."""
