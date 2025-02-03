@@ -9,8 +9,3 @@ class MyList(list):
     def print_sorted(self):
         """Prints the list in ascending order without modifying the
           original list."""
-        try:
-
-            print(sorted(self))
-        except TypeError:
-            raise TypeError("unordonerable types: noneType() <int()")
