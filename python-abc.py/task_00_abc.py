@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module to create class"""
+#Module to create class
 
 from abc import ABC, abstractmethod
 
