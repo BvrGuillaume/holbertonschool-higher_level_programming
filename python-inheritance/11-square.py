@@ -1,18 +1,54 @@
 #!/usr/bin/python3
-"""Module to create class"""
-BaseGeometry = __import__('9-rectangle').BaseGeometry
+'''Mode - 11-base_geometry'''
 
 
-class Square(BaseGeometry):
-    """class representing a square"""
-    def __init__(self, size):
-        self.integer_validator("size", size)
-        self.__size = size
+class BaseGeometry:
+    '''Base Geometry class'''
 
     def area(self):
-        """return the aera of the square"""
-        return self.__size ** 2
-    
+        '''fnc of area'''
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        '''fnc fir int validator'''
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
+
+
+class Rectangle(BaseGeometry):
+    '''Rectangle class'''
+
+    def __init__(self, width, height):
+        '''def for init rectangle'''
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
+
+    def area(self):
+        '''fnc for area'''
+        return self.__width * self.__height
+
     def __str__(self):
-        """return a string representation of the square"""
-        return f"[Sqaure] {self.__size}/{self.__size}"
+        '''fnc for print'''
+        return f"[Rectangle] {self.__width}/{self.__height}"
+
+
+class Square(Rectangle):
+    '''Square class'''
+
+    def __init__(self, size):
+        '''def for init square'''
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
+
+    def area(self):
+        '''fnc for area'''
+        return self.__size * self.__size
+
+    def __str__(self):
+        '''fnc for print'''
+        return f"[Square] {self.__size}/{self.__size}"
