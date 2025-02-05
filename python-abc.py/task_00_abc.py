@@ -3,21 +3,21 @@
 
 from abc import ABC, abstractmethod
 
+"""Animal class"""
+
 
 class Animal(ABC):
-    """Animal class"""
+    
     @abstractmethod
     def sound(self):
         pass
 
-
+"""A class representing a soubclass of animal"""
 class Dog(Animal):
-    """A class representing a soubclass of animal"""
     def sound(self):
         return "Bark"
 
-
+"""A class representing a soubclass of animal"""
 class Cat(Animal):
-    """A class representing a soubclass of animal"""
     def sound(self):
         return "Meow"
