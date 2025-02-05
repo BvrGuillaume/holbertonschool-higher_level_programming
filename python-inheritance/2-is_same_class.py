@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """function that checks if the obj
  is an instance of the specified class"""
 
