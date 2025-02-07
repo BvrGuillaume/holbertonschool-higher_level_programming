@@ -6,7 +6,7 @@ class CountedIterator:
         self.count = 0
 
     def __iter__(self):
-        # An iterator must return itself as an iterator.
+        # An iterator must return itself as an iterator
         return self
 
     def __next__(self):
