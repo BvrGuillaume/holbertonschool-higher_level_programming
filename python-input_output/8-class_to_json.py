@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """My class module"""
 
 def class_to_json(obj):
