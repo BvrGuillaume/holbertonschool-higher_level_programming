@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Module to create pascal triangle"""
 
 
@@ -20,4 +20,3 @@ def pascal_triangle(n):
         triangle.append(new_row)
     
     return triangle
-
