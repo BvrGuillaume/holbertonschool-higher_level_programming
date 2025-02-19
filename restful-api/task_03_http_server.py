@@ -31,8 +31,8 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps(
-                {"error": "Endpoint not found"}).encode("utf-8"))
+            self.wfile.write((
+                {"error": b"Endpoint not found"}).encode("utf-8"))
 
 
 if __name__ == "__main__":
